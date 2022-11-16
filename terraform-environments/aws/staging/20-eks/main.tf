@@ -23,7 +23,7 @@ terraform {
 
   backend "remote" {
     # Update to your Terraform Cloud organization
-    organization = "managedkube"
+    organization = "testdemo2022"
 
     workspaces {
       name = "kubernetes-ops-staging-20-eks"
@@ -39,7 +39,7 @@ data "terraform_remote_state" "vpc" {
   backend = "remote"
   config = {
     # Update to your Terraform Cloud organization
-    organization = "managedkube"
+    organization = "testdemo2022"
     workspaces = {
       name = "kubernetes-ops-${local.environment_name}-10-vpc"
     }
